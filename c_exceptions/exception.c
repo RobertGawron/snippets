@@ -35,7 +35,7 @@ int main() {
     int retval = 0;
 
     zend_try {
-        printf("flow of instruction..\n");
+        printf("flow of instructions..\n");
 
         zend_try {
             function_that_may_rise_exception(__bailout);
