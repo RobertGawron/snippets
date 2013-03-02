@@ -1,4 +1,5 @@
-package genetycznyszukacz;
+package edgedetection;
+
 import java.awt.image.*;
 import java.io.*;
 import javax.imageio.*;
@@ -9,35 +10,37 @@ import java.awt.Color.*;
 import java.awt.Point;
 import java.util.Random;
 
-public class Tracker {
-    // interfejs
-    public Tracker(Point pozycja) {
-        this.pozycja = pozycja;
-        kolor = new Color(0x00, 0x00, 0x00);
+public class Specimen {
+
+    public Specimen(Point birthPlace) {
+        place = birthPlace;
     }
-    
+    public Point place() {
+        return place;
+    }
+/*    
     public void mutuj(){
         // zalozmy, ze mutacja jest mala, max 20%
         int maxMutacja = 20; // w procentach
         Random gen = new Random();
         
-        pozycja.x = pozycja.x + gen.nextInt(2*maxMutacja)-maxMutacja;
-        pozycja.y = pozycja.y + gen.nextInt(2*maxMutacja)-maxMutacja;
+        place.x = place.x + gen.nextInt(2*maxMutacja)-maxMutacja;
+        place.y = place.y + gen.nextInt(2*maxMutacja)-maxMutacja;
         
     }
     
-    public Tracker krzyzuj(Tracker t){
+    public Specimen krzyzuj(Specimen t){
         Random gen = new Random();
         Point lokacja = new Point();
         if(gen.nextDouble()>=0.5){
-            lokacja.x = this.pozycja.x + t.dajPozycje().x%10;
-            lokacja.y = this.pozycja.y + t.dajPozycje().y%10;
+            lokacja.x = this.place.x + t.dajPozycje().x%10;
+            lokacja.y = this.place.y + t.dajPozycje().y%10;
         }
         else{
-            lokacja.x = t.dajPozycje().x + this.pozycja.x%10;
-            lokacja.y = t.dajPozycje().y + this.pozycja.y%10;    
+            lokacja.x = t.dajPozycje().x + this.place.x%10;
+            lokacja.y = t.dajPozycje().y + this.place.y%10;    
         }
-        return new Tracker(lokacja);
+        return new Specimen(lokacja);
     }
     
     // interfejs: setery, getery
@@ -46,7 +49,7 @@ public class Tracker {
     }
     
     public Point dajPozycje(){
-        return this.pozycja;
+        return this.place;
     }
     
     public int dajDopasowanie(Terain teren){        
@@ -55,8 +58,8 @@ public class Tracker {
          // sa krawedzie to jest troche bialych i troche czarnych pixeli w okolo
          int dopasowanie = 0;            
          int promien = 2;
-         int x = pozycja.x;
-         int y = pozycja.y;
+         int x = place.x;
+         int y = place.y;
              
          for(int i=(x-promien); i<(x+promien); i++){
             for(int j=(y-promien); j<(y+promien); j++){                
@@ -73,6 +76,8 @@ public class Tracker {
     }
     
     // pola prywatne
-    private Point pozycja;
-    private Color kolor;
+*/
+     private Point place;
+//    private Color kolor;
+
 }

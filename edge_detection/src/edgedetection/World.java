@@ -1,4 +1,4 @@
-package genetycznyszukacz;
+package edgedetection;
 import java.awt.image.*;
 import java.io.*;
 import javax.imageio.*;
@@ -7,7 +7,7 @@ import java.awt.image.ColorModel;
 import java.awt.image.IndexColorModel;
 import java.awt.Color.*;
 import java.awt.Point;
-
+/*
 public class World {
     public World(int ileOsobnikow, Terain teren){
         this.teren = teren;
@@ -47,3 +47,4 @@ public class World {
     private Population populacja;
     private Terain teren;
 }
+*/
