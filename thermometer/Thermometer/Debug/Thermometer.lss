@@ -1,0 +1,203 @@
+
+Thermometer.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000000f4  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000008  00800060  000000f4  00000168  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .comment      00000030  00000000  00000000  00000170  2**0
+                  CONTENTS, READONLY
+  3 .debug_aranges 00000048  00000000  00000000  000001a0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_info   00000286  00000000  00000000  000001e8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 00000183  00000000  00000000  0000046e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   00000123  00000000  00000000  000005f1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_frame  00000068  00000000  00000000  00000714  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    0000018f  00000000  00000000  0000077c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_loc    000000bb  00000000  00000000  0000090b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_ranges 00000028  00000000  00000000  000009c6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	12 c0       	rjmp	.+36     	; 0x26 <__ctors_end>
+   2:	24 c0       	rjmp	.+72     	; 0x4c <__bad_interrupt>
+   4:	23 c0       	rjmp	.+70     	; 0x4c <__bad_interrupt>
+   6:	22 c0       	rjmp	.+68     	; 0x4c <__bad_interrupt>
+   8:	21 c0       	rjmp	.+66     	; 0x4c <__bad_interrupt>
+   a:	20 c0       	rjmp	.+64     	; 0x4c <__bad_interrupt>
+   c:	1f c0       	rjmp	.+62     	; 0x4c <__bad_interrupt>
+   e:	1e c0       	rjmp	.+60     	; 0x4c <__bad_interrupt>
+  10:	1d c0       	rjmp	.+58     	; 0x4c <__bad_interrupt>
+  12:	1c c0       	rjmp	.+56     	; 0x4c <__bad_interrupt>
+  14:	1b c0       	rjmp	.+54     	; 0x4c <__bad_interrupt>
+  16:	1a c0       	rjmp	.+52     	; 0x4c <__bad_interrupt>
+  18:	19 c0       	rjmp	.+50     	; 0x4c <__bad_interrupt>
+  1a:	18 c0       	rjmp	.+48     	; 0x4c <__bad_interrupt>
+  1c:	17 c0       	rjmp	.+46     	; 0x4c <__bad_interrupt>
+  1e:	16 c0       	rjmp	.+44     	; 0x4c <__bad_interrupt>
+  20:	15 c0       	rjmp	.+42     	; 0x4c <__bad_interrupt>
+  22:	14 c0       	rjmp	.+40     	; 0x4c <__bad_interrupt>
+  24:	13 c0       	rjmp	.+38     	; 0x4c <__bad_interrupt>
+
+00000026 <__ctors_end>:
+  26:	11 24       	eor	r1, r1
+  28:	1f be       	out	0x3f, r1	; 63
+  2a:	cf e5       	ldi	r28, 0x5F	; 95
+  2c:	d4 e0       	ldi	r29, 0x04	; 4
+  2e:	de bf       	out	0x3e, r29	; 62
+  30:	cd bf       	out	0x3d, r28	; 61
+
+00000032 <__do_copy_data>:
+  32:	10 e0       	ldi	r17, 0x00	; 0
+  34:	a0 e6       	ldi	r26, 0x60	; 96
+  36:	b0 e0       	ldi	r27, 0x00	; 0
+  38:	e4 ef       	ldi	r30, 0xF4	; 244
+  3a:	f0 e0       	ldi	r31, 0x00	; 0
+  3c:	02 c0       	rjmp	.+4      	; 0x42 <__SREG__+0x3>
+  3e:	05 90       	lpm	r0, Z+
+  40:	0d 92       	st	X+, r0
+  42:	a8 36       	cpi	r26, 0x68	; 104
+  44:	b1 07       	cpc	r27, r17
+  46:	d9 f7       	brne	.-10     	; 0x3e <__SP_H__>
+  48:	37 d0       	rcall	.+110    	; 0xb8 <main>
+  4a:	52 c0       	rjmp	.+164    	; 0xf0 <_exit>
+
+0000004c <__bad_interrupt>:
+  4c:	d9 cf       	rjmp	.-78     	; 0x0 <__vectors>
+
+0000004e <initDisplay>:
+ */ 
+#include <avr/io.h>
+#include "display.h"
+
+void initDisplay(display_t *display)
+{
+  4e:	fc 01       	movw	r30, r24
+	DDRB |= (1 << display->clk1);
+  50:	47 b3       	in	r20, 0x17	; 23
+  52:	81 e0       	ldi	r24, 0x01	; 1
+  54:	90 e0       	ldi	r25, 0x00	; 0
+  56:	9c 01       	movw	r18, r24
+  58:	00 80       	ld	r0, Z
+  5a:	02 c0       	rjmp	.+4      	; 0x60 <initDisplay+0x12>
+  5c:	22 0f       	add	r18, r18
+  5e:	33 1f       	adc	r19, r19
+  60:	0a 94       	dec	r0
+  62:	e2 f7       	brpl	.-8      	; 0x5c <initDisplay+0xe>
+  64:	24 2b       	or	r18, r20
+  66:	27 bb       	out	0x17, r18	; 23
+	DDRB |= (1 << display->clk2);
+  68:	47 b3       	in	r20, 0x17	; 23
+  6a:	9c 01       	movw	r18, r24
+  6c:	04 80       	ldd	r0, Z+4	; 0x04
+  6e:	02 c0       	rjmp	.+4      	; 0x74 <initDisplay+0x26>
+  70:	22 0f       	add	r18, r18
+  72:	33 1f       	adc	r19, r19
+  74:	0a 94       	dec	r0
+  76:	e2 f7       	brpl	.-8      	; 0x70 <initDisplay+0x22>
+  78:	24 2b       	or	r18, r20
+  7a:	27 bb       	out	0x17, r18	; 23
+	DDRB |= (1 << display->rst1);
+  7c:	47 b3       	in	r20, 0x17	; 23
+  7e:	9c 01       	movw	r18, r24
+  80:	02 80       	ldd	r0, Z+2	; 0x02
+  82:	02 c0       	rjmp	.+4      	; 0x88 <initDisplay+0x3a>
+  84:	22 0f       	add	r18, r18
+  86:	33 1f       	adc	r19, r19
+  88:	0a 94       	dec	r0
+  8a:	e2 f7       	brpl	.-8      	; 0x84 <initDisplay+0x36>
+  8c:	24 2b       	or	r18, r20
+  8e:	27 bb       	out	0x17, r18	; 23
+	DDRB |= (1 << display->rst2);
+  90:	27 b3       	in	r18, 0x17	; 23
+  92:	06 80       	ldd	r0, Z+6	; 0x06
+  94:	02 c0       	rjmp	.+4      	; 0x9a <initDisplay+0x4c>
+  96:	88 0f       	add	r24, r24
+  98:	99 1f       	adc	r25, r25
+  9a:	0a 94       	dec	r0
+  9c:	e2 f7       	brpl	.-8      	; 0x96 <initDisplay+0x48>
+  9e:	82 2b       	or	r24, r18
+  a0:	87 bb       	out	0x17, r24	; 23
+  a2:	08 95       	ret
+
+000000a4 <updateDisplay>:
+}
+
+bool_t updateDisplay(display_t *display, short value)
+{
+	if (value < -100  || value > 100)
+  a4:	6c 59       	subi	r22, 0x9C	; 156
+  a6:	7f 4f       	sbci	r23, 0xFF	; 255
+  a8:	81 e0       	ldi	r24, 0x01	; 1
+  aa:	90 e0       	ldi	r25, 0x00	; 0
+  ac:	69 3c       	cpi	r22, 0xC9	; 201
+  ae:	71 05       	cpc	r23, r1
+  b0:	10 f0       	brcs	.+4      	; 0xb6 <updateDisplay+0x12>
+  b2:	80 e0       	ldi	r24, 0x00	; 0
+  b4:	90 e0       	ldi	r25, 0x00	; 0
+/*
+	updateDisplayRow(first, (value / 10));
+	updateDisplayRow(second, (value % 10));
+	*/
+	return true;
+}
+  b6:	08 95       	ret
+
+000000b8 <main>:
+#include <avr/io.h>
+#include "typeDefs.h"
+#include "display.h"
+
+int main(void)
+{
+  b8:	cf 93       	push	r28
+  ba:	df 93       	push	r29
+  bc:	cd b7       	in	r28, 0x3d	; 61
+  be:	de b7       	in	r29, 0x3e	; 62
+  c0:	28 97       	sbiw	r28, 0x08	; 8
+  c2:	0f b6       	in	r0, 0x3f	; 63
+  c4:	f8 94       	cli
+  c6:	de bf       	out	0x3e, r29	; 62
+  c8:	0f be       	out	0x3f, r0	; 63
+  ca:	cd bf       	out	0x3d, r28	; 61
+	//DDRB = 0b00111111;
+	display_t display = { PIN_0, PIN_1, PIN_2, PIN_3 };
+  cc:	88 e0       	ldi	r24, 0x08	; 8
+  ce:	e0 e6       	ldi	r30, 0x60	; 96
+  d0:	f0 e0       	ldi	r31, 0x00	; 0
+  d2:	de 01       	movw	r26, r28
+  d4:	11 96       	adiw	r26, 0x01	; 1
+  d6:	01 90       	ld	r0, Z+
+  d8:	0d 92       	st	X+, r0
+  da:	8a 95       	dec	r24
+  dc:	e1 f7       	brne	.-8      	; 0xd6 <main+0x1e>
+	initDisplay(&display);
+  de:	ce 01       	movw	r24, r28
+  e0:	01 96       	adiw	r24, 0x01	; 1
+  e2:	b5 df       	rcall	.-150    	; 0x4e <initDisplay>
+	
+    while(true)
+    {
+		updateDisplay(&display, 27);
+  e4:	6b e1       	ldi	r22, 0x1B	; 27
+  e6:	70 e0       	ldi	r23, 0x00	; 0
+  e8:	ce 01       	movw	r24, r28
+  ea:	01 96       	adiw	r24, 0x01	; 1
+  ec:	db df       	rcall	.-74     	; 0xa4 <updateDisplay>
+  ee:	fa cf       	rjmp	.-12     	; 0xe4 <main+0x2c>
+
+000000f0 <_exit>:
+  f0:	f8 94       	cli
+
+000000f2 <__stop_program>:
+  f2:	ff cf       	rjmp	.-2      	; 0xf2 <__stop_program>
