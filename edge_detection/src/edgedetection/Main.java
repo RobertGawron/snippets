@@ -1,7 +1,5 @@
 package edgedetection;
 
-import java.awt.Color.*;
-import java.util.ArrayList;
 import java.awt.image.*;
 import java.io.*;
 import javax.imageio.*;
