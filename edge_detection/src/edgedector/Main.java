@@ -1,4 +1,4 @@
-package edgedetection;
+package edgedector;
 
 import java.awt.image.*;
 import java.io.*;
@@ -9,7 +9,7 @@ import java.util.HashSet;
 public class Main {
     public static void main (String[] args) throws IOException {
         if (args.length != 1) {
-            System.err.println("usage: java program_name input_image");
+            System.err.println("usage: java -cp EdgeDetector.jar edgedector.Main [path and filename of the input image]");
             System.exit(0);
         }
    

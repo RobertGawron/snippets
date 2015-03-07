@@ -1,4 +1,4 @@
-package edgedetection;
+package edgedector;
 
 import java.awt.image.*;
 import java.io.*;

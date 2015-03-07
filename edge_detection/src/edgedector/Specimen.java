@@ -1,4 +1,4 @@
-package edgedetection;
+package edgedector;
 
 import java.awt.Point;
 import java.util.Random;
