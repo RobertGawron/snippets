@@ -1,0 +1,15 @@
+Partlist exported from C:/Users/rgawron/snippets/ion_chamber/main.sch at 2015-06-18 23:19:27
+
+Part Value     Device       Package Description                          MF MPN OC_FARNELL OC_NEWARK
+C1   100n      C-EUC1206    C1206   CAPACITOR, European symbol                                      
+C2   100n      C-EUC1206    C1206   CAPACITOR, European symbol                                      
+C3   100u      CPOL-EUSMCC  SMC_C   POLARIZED CAPACITOR, European symbol                            
+LED1 1N4148    1N4148DO35-7 DO35-7  DIODE                                                           
+LED3 1N4148    1N4148DO35-7 DO35-7  DIODE                                                           
+LED4 1N4148    1N4148DO35-7 DO35-7  DIODE                                                           
+LED5 1N4148    1N4148DO35-7 DO35-7  DIODE                                                           
+Q1   J111      SST201       SOT23   TEMIC / Siliconix N-Channel JFET                                
+R1   10M       R-EU_0207/10 0207/10 RESISTOR, European symbol                                       
+R2   1k        R-EU_R1206   R1206   RESISTOR, European symbol                                       
+R3   100k      R-EU_R1206   R1206   RESISTOR, European symbol                                       
+SV1  connector MA03-1       MA03-1  PIN HEADER                                  unknown    unknown  
