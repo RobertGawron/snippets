@@ -1,0 +1,25 @@
+Partlist exported from C:/Users/rgawron/Documents/eagle/generator/main.sch at 2015-06-18 23:07:28
+
+Part Value  Device          Package      Description                          MF MPN OC_FARNELL OC_NEWARK
+C1   10n    C-EU050-025X075 C050-025X075 CAPACITOR, European symbol                                      
+C2   10n    C-EU050-025X075 C050-025X075 CAPACITOR, European symbol                                      
+C3   10n    C-EU050-025X075 C050-025X075 CAPACITOR, European symbol                                      
+C4   10n    C-EU050-025X075 C050-025X075 CAPACITOR, European symbol                                      
+C5   10n    C-EU050-025X075 C050-025X075 CAPACITOR, European symbol                                      
+C6   10n    C-EU050-025X075 C050-025X075 CAPACITOR, European symbol                                      
+C7   10n    C-EU050-025X075 C050-025X075 CAPACITOR, European symbol                                      
+C8   10n    C-EU050-025X075 C050-025X075 CAPACITOR, European symbol                                      
+C9   100n   C-EUC1206       C1206        CAPACITOR, European symbol                                      
+C10  100u   CPOL-EUE2.5-7   E2,5-7       POLARIZED CAPACITOR, European symbol                            
+D1   1n4148 DIODE-MINIMELF  MINIMELF     DIODE                                                           
+D2   1n4148 DIODE-MINIMELF  MINIMELF     DIODE                                                           
+IC1  4093N  4093N           DIL14        Quad 2-input NAND schmitt trigger                               
+R1   100k   R-EU_0204/2V    0204V        RESISTOR, European symbol                                       
+R2   100k   3RP/1610N       3RP/1610N    16mm Potentiometer one level                                    
+R3   100k   R-EU_0204/2V    0204V        RESISTOR, European symbol                                       
+R4   100k   3RP/1610N       3RP/1610N    16mm Potentiometer one level                                    
+R5   1k     R-EU_0204/2V    0204V        RESISTOR, European symbol                                       
+R6   100k   R-EU_0204/2V    0204V        RESISTOR, European symbol                                       
+S1          DIP08S          DIP08S       DIL/CODE SWITCH                             unknown    unknown  
+SV1  output MA03-1          MA03-1       PIN HEADER                                  unknown    unknown  
+SV2  power  MA03-1          MA03-1       PIN HEADER                                  unknown    unknown  
