@@ -55,9 +55,22 @@
 <layer number="97" name="Info" color="7" fill="1" visible="no" active="no"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="no" active="no"/>
 <layer number="99" name="SpiceOrder" color="5" fill="1" visible="no" active="no"/>
+<layer number="116" name="centerDrill" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
 <board>
 <plain>
+<circle x="21.082" y="18.034" radius="0.353" width="0.206" layer="116"/>
+<circle x="21.082" y="20.574" radius="0.353" width="0.206" layer="116"/>
+<circle x="16.256" y="10.414" radius="0.404" width="0.308" layer="116"/>
+<circle x="16.256" y="12.954" radius="0.404" width="0.308" layer="116"/>
+<circle x="16.256" y="15.494" radius="0.404" width="0.308" layer="116"/>
+<circle x="16.256" y="18.034" radius="0.404" width="0.308" layer="116"/>
+<circle x="29.159" y="13.221" radius="0.379" width="0.257" layer="116"/>
+<circle x="29.159" y="15.227" radius="0.379" width="0.257" layer="116"/>
+<circle x="29.159" y="10.732" radius="0.379" width="0.257" layer="116"/>
+<circle x="31.877" y="7.658" radius="0.728" width="0.956" layer="116"/>
+<circle x="31.877" y="20.79" radius="0.728" width="0.956" layer="116"/>
+<circle x="29.159" y="17.716" radius="0.379" width="0.257" layer="116"/>
 </plain>
 <libraries>
 <library name="resistor">
@@ -1594,9 +1607,10 @@ design rules under a new name.</description>
 <signal name="N$2">
 <contactref element="LED1" pad="K"/>
 <contactref element="R2" pad="1"/>
-<wire x1="23.368" y1="21.082" x2="23.749" y2="21.996" width="0.5588" layer="1"/>
-<wire x1="21.082" y1="20.574" x2="22.962" y2="20.574" width="0.508" layer="1"/>
-<wire x1="22.962" y1="20.574" x2="23.749" y2="21.996" width="0.508" layer="1"/>
+<wire x1="21.082" y1="20.574" x2="21.082" y2="21.717" width="0.508" layer="1"/>
+<wire x1="21.082" y1="21.717" x2="21.59" y2="22.225" width="0.508" layer="1"/>
+<wire x1="21.59" y1="22.225" x2="23.52" y2="22.225" width="0.508" layer="1"/>
+<wire x1="23.52" y1="22.225" x2="23.749" y2="21.996" width="0.508" layer="1"/>
 </signal>
 <signal name="N$3">
 <contactref element="R2" pad="2"/>
