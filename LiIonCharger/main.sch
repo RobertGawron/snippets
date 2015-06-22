@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -11137,16 +11137,16 @@ Based on the datasheets for the following products.&lt;br&gt;
 <instance part="P+1" gate="VCC" x="-25.4" y="59.69"/>
 <instance part="P+2" gate="VCC" x="-13.97" y="59.69"/>
 <instance part="GND1" gate="1" x="10.16" y="33.02"/>
-<instance part="C1" gate="G$1" x="64.77" y="41.91"/>
+<instance part="C1" gate="G$1" x="-36.83" y="44.45"/>
 <instance part="C2" gate="G$1" x="22.86" y="43.18"/>
-<instance part="P+3" gate="VCC" x="64.77" y="49.53"/>
-<instance part="GND3" gate="1" x="64.77" y="31.75"/>
+<instance part="P+3" gate="VCC" x="-36.83" y="52.07"/>
+<instance part="GND3" gate="1" x="-36.83" y="34.29"/>
 <instance part="GND4" gate="1" x="22.86" y="33.02"/>
 <instance part="SV1" gate="1" x="39.37" y="48.26" rot="R180"/>
 <instance part="GND5" gate="1" x="29.21" y="33.02"/>
-<instance part="X1" gate="G$1" x="49.53" y="41.91" rot="R180"/>
-<instance part="P+4" gate="VCC" x="57.15" y="49.53"/>
-<instance part="GND6" gate="1" x="54.61" y="31.75"/>
+<instance part="X1" gate="G$1" x="-52.07" y="44.45" rot="R180"/>
+<instance part="P+4" gate="VCC" x="-44.45" y="52.07"/>
+<instance part="GND6" gate="1" x="-46.99" y="34.29"/>
 </instances>
 <busses>
 </busses>
@@ -11166,7 +11166,7 @@ Based on the datasheets for the following products.&lt;br&gt;
 <segment>
 <pinref part="C1" gate="G$1" pin="-"/>
 <pinref part="GND3" gate="1" pin="GND"/>
-<wire x1="64.77" y1="36.83" x2="64.77" y2="34.29" width="0.1524" layer="91"/>
+<wire x1="-36.83" y1="39.37" x2="-36.83" y2="36.83" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C2" gate="G$1" pin="-"/>
@@ -11182,8 +11182,8 @@ Based on the datasheets for the following products.&lt;br&gt;
 <segment>
 <pinref part="X1" gate="G$1" pin="GND"/>
 <pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="52.07" y1="41.91" x2="54.61" y2="41.91" width="0.1524" layer="91"/>
-<wire x1="54.61" y1="41.91" x2="54.61" y2="34.29" width="0.1524" layer="91"/>
+<wire x1="-49.53" y1="44.45" x2="-46.99" y2="44.45" width="0.1524" layer="91"/>
+<wire x1="-46.99" y1="44.45" x2="-46.99" y2="36.83" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -11209,13 +11209,13 @@ Based on the datasheets for the following products.&lt;br&gt;
 <segment>
 <pinref part="P+3" gate="VCC" pin="VCC"/>
 <pinref part="C1" gate="G$1" pin="+"/>
-<wire x1="64.77" y1="46.99" x2="64.77" y2="44.45" width="0.1524" layer="91"/>
+<wire x1="-36.83" y1="49.53" x2="-36.83" y2="46.99" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="X1" gate="G$1" pin="VBUS"/>
 <pinref part="P+4" gate="VCC" pin="VCC"/>
-<wire x1="52.07" y1="39.37" x2="57.15" y2="39.37" width="0.1524" layer="91"/>
-<wire x1="57.15" y1="39.37" x2="57.15" y2="46.99" width="0.1524" layer="91"/>
+<wire x1="-49.53" y1="41.91" x2="-44.45" y2="41.91" width="0.1524" layer="91"/>
+<wire x1="-44.45" y1="41.91" x2="-44.45" y2="49.53" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
