@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>DAO napisane obiektowo w C: Dokumentacja pliku query-result.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.5 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+      <li><a href="annotated.html"><span>Struktury&nbsp;Danych</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Dokumentacja pliku query-result.h</h1>
+<p>
+<a href="query-result_8h-source.html">Idź do kodu źródłowego tego pliku.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Funkcje</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="query-result_8h.html#05ccb4460b4a5d2a8203aa737d9d5865">QueryResult_insertRow</a> (void *q, char *query)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="query-result_8h.html#4fe04d7161384a41d617f2313b8bfc91">QueryResult_iterator</a> (void *q, char *val, int *isEmpty)</td></tr>
+
+<tr><td colspan="2"><br><h2>Zmienne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="a9d0dde5d7fb43ad8dd22c857d89eb0a"></a><!-- doxytag: member="query-result.h::QueryResult" ref="a9d0dde5d7fb43ad8dd22c857d89eb0a" args="" -->
+void const *&nbsp;</td><td class="memItemRight" valign="bottom"><b>QueryResult</b></td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Moduł zwraac wyniki zapytań <hr><h2>Dokumentacja funkcji</h2>
+<a class="anchor" name="05ccb4460b4a5d2a8203aa737d9d5865"></a><!-- doxytag: member="query-result.h::QueryResult_insertRow" ref="05ccb4460b4a5d2a8203aa737d9d5865" args="(void *q, char *query)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* QueryResult_insertRow           </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>query</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Wysyła do obiektu na rzecz którego zostałą wywołana informację, by zapisał do siebie kolejną krotkę zapytania. Działa to tak, iż zapytanie jest listą krotek, każada taak krotka jest zapisywana z osoba przy wykorzystaniu tej właśnie funkcji. Ilość krotek jest ograniczona. Ogólnie to pownna być tablica zamiast stringa, np gdy zwracamy w zapytaniu SQL imie,nazwisko,wiek to każda krotka powinna być tablicą trójelementową. Cóż, nie jest :P<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>q</em>&nbsp;</td><td>obiekt na rzecz którego wykinujemy komunikat </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>query</em>&nbsp;</td><td>treść krotki </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="4fe04d7161384a41d617f2313b8bfc91"></a><!-- doxytag: member="query-result.h::QueryResult_iterator" ref="4fe04d7161384a41d617f2313b8bfc91" args="(void *q, char *val, int *isEmpty)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* QueryResult_iterator           </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>isEmpty</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Iterator wyników zapytania. Po wykonaniu zapytania i pobraniu wynków do obiektu klasy QueryResults chcemy się do nich dostać, np by je wyświetlić w aplikacji. Do tego służy poniższy iterator, możemy nim zwrócić każdą krotkę, pod pierwszej. Gdy przejżymy wszytkie w isEmpty mamy info, wracamy do punktu wyjścia.<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>q</em>&nbsp;</td><td>obiekt na rzecz którego wykinujemy komunikat </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>val</em>&nbsp;</td><td>łańcuch tekstowy z treścią krotki </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>isEmpty</em>&nbsp;</td><td>jeżeli 1 zwrócony wynik jest oststnim ze zbioru </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sat Nov 1 15:41:06 2008 dla DAO napisane obiektowo w C programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.5 </small></address>
+</body>
+</html>

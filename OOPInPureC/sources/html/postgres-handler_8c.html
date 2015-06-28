@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>DAO napisane obiektowo w C: Dokumentacja pliku postgres-handler.c</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.5 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+      <li><a href="annotated.html"><span>Struktury&nbsp;Danych</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Dokumentacja pliku postgres-handler.c</h1><code>#include &lt;stdio.h&gt;</code><br>
+<code>#include &lt;stdlib.h&gt;</code><br>
+<code>#include &lt;malloc.h&gt;</code><br>
+<code>#include &lt;stdarg.h&gt;</code><br>
+<code>#include &lt;string.h&gt;</code><br>
+<code>#include &quot;libpq-fe.h&quot;</code><br>
+<code>#include &quot;<a class="el" href="new_8h-source.html">new.h</a>&quot;</code><br>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Struktury danych</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPostgresHandler.html">PostgresHandler</a></td></tr>
+
+<tr><td colspan="2"><br><h2>Funkcje</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="postgres-handler_8c.html#331a80584512f365a38dc569dab39706">joinStrings</a> (const char *a, const char *b)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="a042cf9eec3acff6c4238199f15f7469"></a><!-- doxytag: member="postgres-handler.c::PostgresHandler_query" ref="a042cf9eec3acff6c4238199f15f7469" args="(void *_self, void *query_string, void *result)" -->
+void *&nbsp;</td><td class="memItemRight" valign="bottom"><b>PostgresHandler_query</b> (void *_self, void *query_string, void *result)</td></tr>
+
+<tr><td colspan="2"><br><h2>Zmienne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="b8fda78f1598bd9263d94e2e5bff1e4f"></a><!-- doxytag: member="postgres-handler.c::PostgresHandler" ref="b8fda78f1598bd9263d94e2e5bff1e4f" args="" -->
+const void *&nbsp;</td><td class="memItemRight" valign="bottom"><b>PostgresHandler</b> = &amp;_PostgresHandler</td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Implementacja handlera postgresa, korzysta z biblioteki libpq. Wykorzystywana jako jeden z modułów/wtyczek dla DAO. <hr><h2>Dokumentacja funkcji</h2>
+<a class="anchor" name="331a80584512f365a38dc569dab39706"></a><!-- doxytag: member="postgres-handler.c::joinStrings" ref="331a80584512f365a38dc569dab39706" args="(const char *a, const char *b)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* joinStrings           </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>b</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Pomocnicza funkcja pobierająca dwa stringi i zwracająca ich konkatenację. Nie sprawdza wyjątkowych sytuacji, nie zwraca statusu. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>a</em>&nbsp;</td><td>string pierwszy do połączenia </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>a</em>&nbsp;</td><td>string drugi do połączenia </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sat Nov 1 15:41:06 2008 dla DAO napisane obiektowo w C programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.5 </small></address>
+</body>
+</html>
