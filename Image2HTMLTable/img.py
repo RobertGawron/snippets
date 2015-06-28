@@ -1,10 +1,10 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import sys
 import string
-import Image
+from PIL import Image
 
 def save_image(image, template, output_file):
-    data = string.replace(template, 'IMAGE', image)
+    data = template.replace('IMAGE', image)
     output = open(output_file, 'w')
     output.write(data)
 
