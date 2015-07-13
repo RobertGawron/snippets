@@ -344,6 +344,7 @@ UsedLibrary="C:/EAGLE-7.2.0/lbr/xilinx-xc9.lbr"
 UsedLibrary="C:/EAGLE-7.2.0/lbr/xilinx-xcv.lbr"
 UsedLibrary="C:/EAGLE-7.2.0/lbr/zetex.lbr"
 UsedLibrary="C:/EAGLE-7.2.0/lbr/zilog.lbr"
+UsedLibrary="C:/Users/rgawron/Documents/eagle/libs/LTC-4727JR.lbr"
 UsedLibrary="C:/Users/rgawron/Documents/eagle/libs/starchips.lbr"
 
 [Win_1]
