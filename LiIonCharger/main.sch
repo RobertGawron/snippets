@@ -11227,21 +11227,33 @@ Source: http://www.hirose.co.jp/cataloge_hp/e24000019.pdf</description>
 <instances>
 <instance part="R1" gate="G$1" x="15.24" y="40.64" rot="R90"/>
 <instance part="IC1" gate="G$1" x="-2.54" y="48.26"/>
-<instance part="R2" gate="G$1" x="-20.32" y="45.72"/>
+<instance part="R2" gate="G$1" x="-20.32" y="45.72" smashed="yes">
+<attribute name="NAME" x="-21.59" y="47.2186" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-24.13" y="42.418" size="1.778" layer="96"/>
+</instance>
 <instance part="LED1" gate="G$1" x="-27.94" y="50.8"/>
 <instance part="GND2" gate="1" x="15.24" y="33.02"/>
 <instance part="P+1" gate="VCC" x="-27.94" y="58.42"/>
 <instance part="P+2" gate="VCC" x="-15.24" y="58.42"/>
-<instance part="GND1" gate="1" x="10.16" y="33.02"/>
+<instance part="GND1" gate="1" x="10.16" y="33.02" smashed="yes">
+<attribute name="VALUE" x="5.08" y="30.48" size="1.778" layer="96"/>
+</instance>
 <instance part="C1" gate="G$1" x="-40.64" y="43.18"/>
 <instance part="C2" gate="G$1" x="20.32" y="43.18"/>
 <instance part="P+3" gate="VCC" x="-40.64" y="55.88"/>
 <instance part="GND3" gate="1" x="-40.64" y="33.02"/>
-<instance part="GND4" gate="1" x="20.32" y="33.02"/>
-<instance part="GND5" gate="1" x="27.94" y="33.02"/>
+<instance part="GND4" gate="1" x="20.32" y="33.02" smashed="yes">
+<attribute name="VALUE" x="20.32" y="30.48" size="1.778" layer="96"/>
+</instance>
+<instance part="GND5" gate="1" x="27.94" y="33.02" smashed="yes">
+<attribute name="VALUE" x="27.94" y="30.48" size="1.778" layer="96"/>
+</instance>
 <instance part="P+4" gate="VCC" x="-48.26" y="55.88"/>
 <instance part="GND6" gate="1" x="-48.26" y="33.02"/>
-<instance part="X2" gate="G$1" x="-55.88" y="45.72" rot="MR0"/>
+<instance part="X2" gate="G$1" x="-55.88" y="45.72" smashed="yes" rot="MR0">
+<attribute name="NAME" x="-58.42" y="57.15" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="-66.04" y="38.1" size="1.778" layer="96" rot="MR90"/>
+</instance>
 <instance part="SV2" gate="G$1" x="38.1" y="50.8" rot="MR0"/>
 </instances>
 <busses>
