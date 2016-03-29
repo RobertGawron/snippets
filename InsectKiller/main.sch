@@ -58,7 +58,7 @@
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
-<layer number="99" name="SpiceOrder" color="5" fill="1" visible="yes" active="yes"/>
+<layer number="99" name="SpiceOrder" color="5" fill="1" visible="no" active="yes"/>
 <layer number="100" name="help" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="101" name="DOC" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="102" name="bot_pads" color="7" fill="1" visible="yes" active="yes"/>
@@ -21974,7 +21974,7 @@ wire to board 2.54 mm (.1 inch) pitch header</description>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="C7" library="resistor" deviceset="C-EU" device="C0805" value="220n"/>
 <part name="Q1" library="transistor-power" deviceset="IRF530" device=""/>
-<part name="C9" library="rcl" deviceset="C-EU" device="075-042X103" value="2n2/4k"/>
+<part name="C9" library="rcl" deviceset="C-EU" device="075-042X103" value="4n7/4k"/>
 <part name="R5" library="resistor" deviceset="R-EU_" device="0207/10" value="33M"/>
 <part name="D3" library="diode" deviceset="ES2D" device=""/>
 <part name="IC1" library="40xx" deviceset="4011" device="D"/>
@@ -21991,7 +21991,7 @@ wire to board 2.54 mm (.1 inch) pitch header</description>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="C8" library="resistor" deviceset="C-EU" device="C0805" value="220n"/>
 <part name="D5" library="diode" deviceset="BAV21" device=""/>
-<part name="C10" library="resistor" deviceset="C-EU" device="075-042X103" value="2n2/4k"/>
+<part name="C10" library="resistor" deviceset="C-EU" device="075-042X103" value="4n7/4k"/>
 <part name="D4" library="diode" deviceset="BAV21" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
@@ -22040,7 +22040,7 @@ wire to board 2.54 mm (.1 inch) pitch header</description>
 <instance part="P+4" gate="VCC" x="22.86" y="20.32" rot="MR0"/>
 <instance part="GND6" gate="1" x="22.86" y="-10.16" rot="MR0"/>
 <instance part="C8" gate="G$1" x="35.56" y="66.04"/>
-<instance part="D5" gate="1" x="86.36" y="71.12"/>
+<instance part="D5" gate="1" x="83.82" y="71.12"/>
 <instance part="C10" gate="G$1" x="91.44" y="60.96" rot="R180"/>
 <instance part="D4" gate="1" x="78.74" y="60.96" rot="R90"/>
 <instance part="GND7" gate="1" x="35.56" y="55.88" rot="MR0"/>
@@ -22344,7 +22344,7 @@ wire to board 2.54 mm (.1 inch) pitch header</description>
 <pinref part="C9" gate="G$1" pin="2"/>
 <wire x1="76.2" y1="71.12" x2="78.74" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="D5" gate="1" pin="A"/>
-<wire x1="78.74" y1="71.12" x2="83.82" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="71.12" x2="81.28" y2="71.12" width="0.1524" layer="91"/>
 <junction x="78.74" y="71.12"/>
 <pinref part="D4" gate="1" pin="C"/>
 <wire x1="78.74" y1="71.12" x2="78.74" y2="63.5" width="0.1524" layer="91"/>
@@ -22355,7 +22355,7 @@ wire to board 2.54 mm (.1 inch) pitch header</description>
 <pinref part="D5" gate="1" pin="C"/>
 <pinref part="C10" gate="G$1" pin="2"/>
 <wire x1="91.44" y1="71.12" x2="91.44" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="88.9" y1="71.12" x2="91.44" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="71.12" x2="91.44" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="68.58" x2="114.3" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="71.12" x2="104.14" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="71.12" x2="104.14" y2="68.58" width="0.1524" layer="91"/>
