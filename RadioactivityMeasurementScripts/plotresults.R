@@ -31,55 +31,52 @@ sprintf("   Standard deviation: %f", sd(samples4))
 sprintf("")
 
 
+radioactivityGraph <- function(radiation, fileName, graphTitle){
+    png(filename=fileName, height=500, width=800, bg="white")
+
+    barNames <- sprintf("%d", c(1:length(radiation)))
+
+    df.bar <- barplot(radiation, names.arg=barNames, ylim=c(0,200), main=graphTitle, ylab="counts / minute", xlab="sample id", xpd=TRUE)
+
+    lines(x=df.bar, y=rep(mean(radiation), length(radiation)))
+    points(x=df.bar, y=rep(mean(radiation), length(radiation)), pch=19)
+
+    grid(nx=NA, ny=NULL)
+
+    legend("bottom", "mean", pch=19)
+
+    dev.off()
+
+    return(NULL)
+}
+
 
 #--
+radioactivityGraph(samples1, "EnviromentalRadiactivity.png", "Enviromental radioactivity")
+radioactivityGraph(samples2, "PotassiumGlassShield.png", "Potassium behind a glass shield")
+radioactivityGraph(samples3, "Potassium.png", "Potassium")
+radioactivityGraph(samples4, "Ashes.png", "Ashes (remainings after potassium extraction)")
 
-png(filename="EnvRadiactivityGraph.png", height=500, width=800, bg="white")
 
-graphData <- samples1
 
-plot(x=c(1:length(graphData)), y=graphData, main="Environmental Radioactivity Level", xlab="samples", type="p",xaxs = "i",yaxs="i",
-    ylab="counts / minute",  ylim=c(0, 1.1*max(graphData)), xpd=TRUE)
-grid(col="black")
+
+
 
 #---
 
-png(filename="PotassiumObstacleRadiactivityGraph.png", height=500, width=800, bg="white")
 
-graphData <- samples2
-
-plot(x=c(1:length(graphData)), y=graphData, main="Potassium (+glass obstacle) Radioactivity Level", xlab="samples", type="p",xaxs = "i",yaxs="i",
-    ylab="counts / minute",  ylim=c(0, 1.1*max(graphData)), xpd=TRUE)
-grid(col="black")
-
-#---
-
-png(filename="PotassiumRadiactivityGraph.png", height=500, width=800, bg="white")
-
-graphData <- samples3
-
-plot(x=c(1:length(graphData)), y=graphData, main="Potassium Radioactivity Level", xlab="samples", type="p",xaxs = "i",yaxs="i",
-    ylab="counts / minute",  ylim=c(0, 1.1*max(graphData)), xpd=TRUE)
-grid(col="black")
-
-#---
-
-png(filename="AshRadiactivityGraph.png", height=500, width=800, bg="white")
-
-graphData <- samples4
-
-plot(x=c(1:length(graphData)), y=graphData, main="Cigarette Ash Radioactivity Level", xlab="samples", type="p",xaxs = "i",yaxs="i",
-    ylab="counts / minute",  ylim=c(0, 1.1*max(graphData)), xpd=TRUE)
-grid(col="black")
-
-
-png(filename="RadiactivityGraph.png", height=500, width=800, bg="white")
+png(filename="RadiactivitySummary.png", height=500, width=800, bg="white")
 
 graphData <- c(m1, m2, m3, m4)
 barplot(rep(NA,length(graphData)),ylim=c(0, 1.25*max(graphData)),axes=FALSE)
-grid(col="black")
-barplot(graphData, main="Comparation Radioactivity Level", xlab="", add=T,
-    ylab="counts / minute",  ylim=c(0, 1.25*max(graphData)), xpd=TRUE,
-	names.arg=c("no sample", "potassium (obstacle)", "potassium", "ash remaining"))
+grid(nx=NA, ny=NULL)
+
+
+barplot(graphData, main="Comparation of sample radioactivity", xlab="", add=T,
+    ylab="mean (counts / minute)",  ylim=c(0, 1.25*max(graphData)), xpd=TRUE,
+	names.arg=c("envirmomental", "potassium shielded by glass", "potassium", "ashes after extraction"))
+
+dev.off()
+
 
 warnings()
