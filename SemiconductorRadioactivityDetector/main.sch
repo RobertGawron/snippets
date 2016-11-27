@@ -16114,6 +16114,7 @@ by R. Vogg  15.March.2002</description>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
+<part name="C9" library="resistor" deviceset="C-EU" device="C1206" value="100n"/>
 </parts>
 <sheets>
 <sheet>
@@ -16162,7 +16163,7 @@ by R. Vogg  15.March.2002</description>
 <instance part="GND4" gate="1" x="119.38" y="68.58" rot="MR0"/>
 <instance part="P+1" gate="VCC" x="119.38" y="111.76" rot="MR0"/>
 <instance part="C6" gate="G$1" x="147.32" y="132.08" rot="R90"/>
-<instance part="R10" gate="G$1" x="147.32" y="124.46" rot="R180"/>
+<instance part="R10" gate="G$1" x="147.32" y="116.84" rot="R180"/>
 <instance part="R11" gate="G$1" x="129.54" y="142.24" rot="R180"/>
 <instance part="R12" gate="G$1" x="121.92" y="132.08" rot="R90"/>
 <instance part="GND5" gate="1" x="121.92" y="121.92" rot="MR0"/>
@@ -16187,6 +16188,7 @@ by R. Vogg  15.March.2002</description>
 <instance part="GND11" gate="1" x="30.48" y="81.28" rot="MR0"/>
 <instance part="GND12" gate="1" x="5.08" y="81.28" rot="MR0"/>
 <instance part="GND13" gate="1" x="38.1" y="111.76" rot="MR0"/>
+<instance part="C9" gate="G$1" x="147.32" y="124.46" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -16426,12 +16428,16 @@ by R. Vogg  15.March.2002</description>
 <pinref part="IC3" gate="D" pin="-IN"/>
 <wire x1="137.16" y1="142.24" x2="139.7" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="R10" gate="G$1" pin="2"/>
-<wire x1="142.24" y1="124.46" x2="137.16" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="124.46" x2="137.16" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="116.84" x2="137.16" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="116.84" x2="137.16" y2="124.46" width="0.1524" layer="91"/>
 <junction x="137.16" y="132.08"/>
 <pinref part="R11" gate="G$1" pin="1"/>
+<wire x1="137.16" y1="124.46" x2="137.16" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="142.24" x2="134.62" y2="142.24" width="0.1524" layer="91"/>
 <junction x="137.16" y="142.24"/>
+<pinref part="C9" gate="G$1" pin="1"/>
+<wire x1="144.78" y1="124.46" x2="137.16" y2="124.46" width="0.1524" layer="91"/>
+<junction x="137.16" y="124.46"/>
 </segment>
 </net>
 <net name="N$13" class="0">
@@ -16442,12 +16448,16 @@ by R. Vogg  15.March.2002</description>
 <pinref part="IC3" gate="D" pin="OUT"/>
 <wire x1="160.02" y1="144.78" x2="154.94" y2="144.78" width="0.1524" layer="91"/>
 <pinref part="R10" gate="G$1" pin="1"/>
-<wire x1="152.4" y1="124.46" x2="160.02" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="160.02" y1="124.46" x2="160.02" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="116.84" x2="160.02" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="116.84" x2="160.02" y2="124.46" width="0.1524" layer="91"/>
 <junction x="160.02" y="132.08"/>
 <pinref part="INTEGRATED_OUTPUT" gate="-1" pin="S"/>
+<wire x1="160.02" y1="124.46" x2="160.02" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="160.02" y1="144.78" x2="165.1" y2="144.78" width="0.1524" layer="91"/>
 <junction x="160.02" y="144.78"/>
+<pinref part="C9" gate="G$1" pin="2"/>
+<wire x1="152.4" y1="124.46" x2="160.02" y2="124.46" width="0.1524" layer="91"/>
+<junction x="160.02" y="124.46"/>
 </segment>
 </net>
 <net name="N$14" class="0">
