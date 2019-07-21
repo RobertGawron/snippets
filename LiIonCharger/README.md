@@ -1,4 +1,4 @@
-USB powered Li-Ion charger.
+# USB powered Li-Ion charger.
 
 Be carefull, incorrectly connected or overcharged Li-Ion battery can explode or burn. Always load them when you are around.
 
