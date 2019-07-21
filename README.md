@@ -1,3 +1,5 @@
-# Small harwdare and software projects from my home page
+# Various small projects from my homepage
 
-Hardware and software projects [from my home page](http://robertgawron.blogspot.com/), visit README in project directory for description and link to an article.
+Each project has its own directory, in each is README with short description and link to the article.
+
+Projects come from [my home page](http://robertgawron.blogspot.com).
