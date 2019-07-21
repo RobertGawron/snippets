@@ -1,4 +1,4 @@
-A very simple CMS written only in SQL.
+# A very simple CMS written only in SQL.
 
 For more info please visit full article:
 http://robertgawron.blogspot.com/2011/01/cms-written-entirely-by-using-plpgsql.html
